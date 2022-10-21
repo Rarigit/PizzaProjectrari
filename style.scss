@@ -1,0 +1,98 @@
+// @use "general"
+
+*{
+    background-color: bisque;
+}
+
+#Toplogo{
+    height: 25vh;
+    align-items: center;
+    justify-items: center;
+    background-color: rgb(114, 218, 250);
+}
+
+#pizzaHeader{
+    display: grid;
+    grid-template-rows: 15vh 15vh;
+    background-color: rgb(114, 218, 250);
+    justify-items: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: monospace;
+}
+
+#navSettings{
+    display: grid;
+    grid-template-columns: 33vw 33vw 1fr;
+    border: 0.3vh black solid;
+    border-radius: 10%;
+    text-decoration: none;
+    background-color: rgb(114, 218, 250);
+}
+
+.button{
+    background-color: rgb(114, 218, 250);
+    cursor: pointer;
+}
+
+#pizzaCarousel{
+    position: relative;//This keeps the element affected by the css in order of the html
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-gap: 10px;
+    overflow: hidden;
+    height: 100vh;   
+        img{
+            width: 100%;
+            display: block;
+        }
+        #subpCar{
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        #pizzaGallery{
+            overflow: scroll;
+        }
+}
+
+#pizzaArticle{
+    font-style: italic;
+        #pizzaAbout{
+            font-family: monospace;
+            font-size: 14px;
+        }
+}
+
+#pizzaMaps{
+    position: relative;
+        iframe{
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+            text-align: center;
+        }
+}
+
+#pizzaFooter{
+    display: grid;
+    grid-template-columns: 33vw 1fr 1fr;
+    grid-template-rows: 10vh 1fr;
+    background-color: rgb(114, 218, 250);
+    min-height: 7vh;
+    font-size: 12px;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    bottom: 0.1vh;
+    img{
+        height: 7vh;
+        background-color: rgb(114, 218, 250);
+    }
+    #pizzaAddy{
+        font-size: 14px;
+        font-family: monospace;
+        justify-items: center;
+        align-content: center;
+        background-color: rgb(114, 218, 250);
+    }
+}
