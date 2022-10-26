@@ -93,4 +93,41 @@
   justify-items: center;
   align-content: center;
   background-color: rgb(114, 218, 250);
+}
+
+#pizzaCyber {
+  position: relative;
+}
+#pizzaCyber img {
+  height: 50vh;
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+}
+
+.pizzaH2 {
+  font-family: monospace;
+  font-size: 22px;
+}
+
+.pizzaMenu {
+  display: grid;
+  /*grid-template-columns: 25vw 1fr 1fr 1fr;*/
+  grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+}
+.pizzaMenu .pizzaInception {
+  display: grid;
+  justify-items: center;
+  text-align: center; /*This is to get those p elements centered*/
+  align-items: center;
+  border: solid darkmagenta 2px;
+  font-family: monospace;
+}
+.pizzaMenu img {
+  height: 15vh;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
