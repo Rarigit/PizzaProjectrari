@@ -1,0 +1,23 @@
+@import "variables";
+
+@keyframes pizzaAnimation { // I looked at the slides and examples gone over in
+    //class very thoroughly and it allowed me to understand animations.
+    //Therefore I've put each frame in ascending order (+px)
+    //with a transition all the way up to 7 seconds.
+    //I've used the $logo-init-width with a value of 10px and
+    //imported that variable via the @import variables function.
+    //From my understanding each frame will utilize the width
+    //Ive imputted on each image frame from 0% -> 100%.
+    0% {
+        width: 10*$logo-init-width;
+    }
+    50% {
+        width: 20*$logo-init-width;
+    }
+    75% {
+        width: 30*$logo-init-width;
+    }
+    100% {
+        width: 40*$logo-init-width;
+    }
+}
