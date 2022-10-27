@@ -32,34 +32,39 @@
   }
 }
 #Toplogo {
-  height: 25vh;
-  align-items: center;
-  justify-items: center;
+  height: 20vh;
+  width: 100%;
+  align-items: left;
+  justify-items: left;
+  justify-content: left;
+  text-align: center;
   background-color: rgb(114, 218, 250);
 }
 
 #pizzaHeader {
   display: grid;
-  grid-template-rows: 15vh 15vh;
+  grid-template-columns: 40vw 1fr;
   background-color: rgb(114, 218, 250);
+  align-items: center;
+  font-size: 14px;
+  font-family: monospace;
+  height: 25vh;
+}
+#pizzaHeader #navSettings {
+  display: grid;
   justify-items: center;
   align-items: center;
-  font-size: 18px;
-  font-family: monospace;
-}
-
-#navSettings {
-  display: grid;
-  grid-template-columns: 33vw 33vw 1fr;
-  border: 0.3vh black solid;
+  grid-template-rows: 15vh 1fr 1fr;
+  grid-template-columns: 15vw 1fr 1fr;
   border-radius: 10%;
   text-decoration: none;
   background-color: rgb(114, 218, 250);
 }
-
-.button {
+#pizzaHeader #navSettings .button {
   background-color: rgb(114, 218, 250);
   cursor: pointer;
+  border-style: dashed;
+  border-color: black;
 }
 
 #pizzaCarousel {
@@ -82,12 +87,13 @@
   overflow: scroll;
 }
 
-#pizzaArticle {
+#pizzaArticle #pizzaAbTitle {
   font-style: monospace;
+  font-size: 22px;
 }
 #pizzaArticle #pizzaAbout {
   font-family: monospace;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 #pizzaVideo {
@@ -131,6 +137,15 @@
   font-family: monospace;
   justify-items: center;
   align-content: center;
+  text-align: center;
+  background-color: rgb(114, 218, 250);
+}
+#pizzaFooter #pizzaRight {
+  font-size: 14px;
+  font-family: monospace;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
   background-color: rgb(114, 218, 250);
 }
 
@@ -188,7 +203,7 @@ section h1 img {
   text-align: center;
 }
 #pizzaAnimate > img {
-  height: 40vh;
+  height: 45vh;
 }
 #pizzaAnimate > img:hover {
   -webkit-animation: pizzaAnimation 2s ease-in-out 7;

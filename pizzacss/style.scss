@@ -3,34 +3,39 @@
 @import "variables";//For now using just the $logo-init function
 
 #Toplogo{
-    height: 25vh;
-    align-items: center;
-    justify-items: center;
+    height: 20vh;
+    width: 100%;
+    align-items: left;
+    justify-items: left;
+    justify-content: left;
+    text-align: center;
     background-color: rgb(114, 218, 250);
 }
 
 #pizzaHeader{
     display: grid;
-    grid-template-rows: 15vh 15vh;
+    grid-template-columns: 40vw 1fr;
     background-color: rgb(114, 218, 250);
-    justify-items: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 14px;
     font-family: monospace;
-}
-
-#navSettings{
-    display: grid;
-    grid-template-columns: 33vw 33vw 1fr;
-    border: 0.3vh black solid;
-    border-radius: 10%;
-    text-decoration: none;
-    background-color: rgb(114, 218, 250);
-}
-
-.button{
-    background-color: rgb(114, 218, 250);
-    cursor: pointer;
+    height: 25vh;
+        #navSettings{
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-rows: 15vh 1fr 1fr;
+        grid-template-columns: 15vw 1fr 1fr;
+        border-radius: 10%;
+        text-decoration: none;
+        background-color: rgb(114, 218, 250);
+            .button{
+            background-color: rgb(114, 218, 250);
+            cursor: pointer;
+            border-style: dashed;
+            border-color: black;
+            }
+        }
 }
 
 #pizzaCarousel{
@@ -54,10 +59,13 @@
 }
 
 #pizzaArticle{
-    font-style: monospace;
+    #pizzaAbTitle{
+        font-style: monospace;
+        font-size: 22px;
+        }
         #pizzaAbout{
             font-family: monospace;
-            font-size: 14px;
+            font-size: 15px;
         }
 }
 
@@ -101,6 +109,15 @@
         font-family: monospace;
         justify-items: center;
         align-content: center;
+        text-align: center;
+        background-color: rgb(114, 218, 250);
+    }
+    #pizzaRight{    
+        font-size: 14px;
+        font-family: monospace;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
         background-color: rgb(114, 218, 250);
     }
 }
@@ -153,13 +170,12 @@ section h1{
         }
 }
 
-
 #pizzaAnimate{  //Here I've used my ID to align my image centrally. The text align is really a great hack for this.
     justify-items: center;
     align-items: center;
     text-align: center;
     >img{
-        height: 40vh;
+        height: 45vh;
         &:hover{ //This code style was used by the instructor in a previous in-class example. 
             //I tried to deconstruct and style it my own way and i checked web3/devdocs for some other ways to do it, 
             //but to no avail. I do understand how it works for the most part. 
@@ -171,7 +187,6 @@ section h1{
             //as it does get hard to look at after a while. 
     } 
 }
-
 
 #pizzaContact{
     display: grid;
