@@ -267,7 +267,7 @@ section h1 img {
     align-items: center;
     text-align: center;
     background-color: rgb(114, 218, 250);
-    height: 20vh;
+    height: 25vh;
   }
   #pizzaHeader {
     display: grid;
@@ -277,7 +277,7 @@ section h1 img {
     justify-items: center;
     font-size: 14px;
     font-family: monospace;
-    height: 20vh;
+    height: 25vh;
   }
   #pizzaHeader #navSettings {
     display: grid;
@@ -440,7 +440,7 @@ section h1 img {
     align-items: center;
     text-align: center;
     background-color: rgb(114, 218, 250);
-    height: 20vh;
+    height: 30vh;
   }
   #pizzaHeader {
     display: grid;
@@ -450,7 +450,7 @@ section h1 img {
     justify-items: center;
     font-size: 14px;
     font-family: monospace;
-    height: 20vh;
+    height: 25vh;
   }
   #pizzaHeader #navSettings {
     display: grid;

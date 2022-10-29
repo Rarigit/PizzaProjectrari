@@ -250,7 +250,7 @@ section h1{
         align-items: center;
         text-align: center;
         background-color: rgb(114, 218, 250);
-        height: 20vh;
+        height: 25vh;
     }
 
     #pizzaHeader{
@@ -261,7 +261,7 @@ section h1{
         justify-items: center;//Centered top logo
         font-size: 14px;
         font-family: monospace;
-        height: 20vh;//same height as mobile
+        height: 25vh;//changed the header height
             #navSettings{
             display: grid;
             justify-items: center;
@@ -440,7 +440,7 @@ section h1{
         align-items: center;
         text-align: center;
         background-color: rgb(114, 218, 250);
-        height: 20vh;//increased logo size
+        height: 30vh;//increased logo size for desktop
     }
 
     #pizzaHeader{
@@ -451,7 +451,7 @@ section h1{
         justify-items: center;//Centered top logo
         font-size: 14px;
         font-family: monospace;
-        height: 20vh;//same height as mobile/tablet
+        height: 25vh;//same height as mobile/tablet
             #navSettings{
             display: grid;
             justify-items: center;
@@ -622,3 +622,4 @@ section h1{
             }
         }
 }
+
