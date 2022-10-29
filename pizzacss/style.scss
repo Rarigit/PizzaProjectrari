@@ -19,7 +19,7 @@
     align-items: center;
     font-size: 14px;
     font-family: monospace;
-    height: 25vh;
+    height: 20vh;
         #navSettings{
         display: grid;
         justify-items: center;
@@ -83,15 +83,6 @@
         top: 0;
         left: 0;
     }
-}
-
-#pizzaMaps{ //On Contact page only
-    position: relative;
-        iframe{
-            width: 100%;
-            height: 50vh;
-            text-align: center;
-        }
 }
 
 #pizzaFooter{
@@ -162,9 +153,9 @@
             justify-items: center;
             text-align: center;/*This is to get those p elements centered*/
             align-items: center;
-            border: solid darkmagenta 2px;
+            border: solid bisque 1px;
             font-family: monospace;
-        }
+            }
                 img{
                     height: 15vh;
                     width: 100%;
@@ -241,7 +232,17 @@ section h1{
         }
 }
 
-//Tablet Media Queries Start
+#pizzaMaps{ //On Contact page only
+    position: relative;
+        iframe{
+            width: 100%;
+            height: 50vh;
+            text-align: center;
+        }
+}
+
+
+/////////Tablet Media Queries Start
 
 @media only screen and (min-width: 600px) {
     #Toplogo{
@@ -260,7 +261,7 @@ section h1{
         justify-items: center;//Centered top logo
         font-size: 14px;
         font-family: monospace;
-        height: 25vh;
+        height: 20vh;//same height as mobile
             #navSettings{
             display: grid;
             justify-items: center;
@@ -280,19 +281,29 @@ section h1{
             }
     }
 
-    #pizzaCyber {
-        position: relative;
-        display: grid;
-        grid-template-columns: 50vw 1fr;
-            img{
-                height: 35vh;
-                /*overflow: hidden;*/
-                text-align: center;
-                justify-content: center;
-                justify-self: center;
-                width: 70%;
-                /*width: 100%;*/
+    #pizzaArticle{
+        #pizzaAbTitle{
+            font-style: monospace;
+            font-size: 28px;
             }
+            #pizzaAbout{
+                font-family: monospace;
+                font-size: 18px;
+            }
+    }
+
+    #pizzaCyber {//Added new image to contact page
+        position: relative;
+        text-align: center;//Centered image
+            img{
+                height: 45vh;//increased height 
+                width: 50%;
+            }
+    }
+
+    .pizzaH2 {
+        font-family: monospace;
+        font-size: 24px;//increased font size
     }
 
     .pizzaMenu {
@@ -304,8 +315,9 @@ section h1{
                 justify-items: center;
                 text-align: center;
                 align-items: center;
-                border: solid darkmagenta 2px;
+                border: solid bisque 1px;
                 font-family: monospace;
+                font-size: 16px;
                     img{
                         height: 25vh;//Increased the height of the menu images
                         width: 75%;
@@ -313,5 +325,300 @@ section h1{
                         text-align: center;
                     }       
                 }
+    }
+
+    #pizzaAnimate{  
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+            >img{
+                height: 55vh;//increased height of animation
+                &:hover{ 
+                animation: pizzaAnimation 2s ease-in-out 7;
+                }   
+            } 
+    }
+        
+        
+    #pizzaForm{
+        font-family: monospace;
+        font-size: 35px;//increased font size
+    }
+        
+    #pizzaLabel{
+        display: grid;
+        height: 40vh;
+        justify-content: center;
+        text-align: center;
+        justify-items: center;
+        font-family: monospace;
+        font-size: 25px;//increased font size
+            #pizzaSubmit{
+                background-color: green;
+                font-family: monospace;
+                font-size: 25px;//increased font size
+                }
+    }
+        
+        
+    #pizzaContact{
+        display: grid;
+        grid-template-rows: repeat(auto-fill, minmax(50vw, 1fr));
+        justify-items: center;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        font-family: monospace;
+        font-size: 30px;//increased font size
+            #pizzaDigits2{
+                position: relative;
+                    .button{
+                        background-color: rgb(114, 218, 250);
+                        font-family: monospace;
+                        font-size: 25px;//increased font size
+                        }
+                }
+    }
+        
+
+    #pizzaMaps{ 
+        position: relative;
+            iframe{
+                width: 100%;
+                height: 70vh;
+                text-align: center;
+                }
+    }
+
+
+    #pizzaFooter{
+        display: grid;
+        grid-template-columns: 33vw 1fr 1fr;
+        grid-template-rows: 15vh 1fr;//increased footer grid height
+        background-color: rgb(114, 218, 250);
+        min-height: 7vh;
+        font-size: 12px;
+        align-items: center;
+        justify-items: center;
+        position: relative;
+        bottom: 0.1vh;
+            img{
+            height: 7vh;
+            background-color: rgb(114, 218, 250);
+            }
+            #pizzaAddy{
+            font-size: 20px;//increased font size
+            font-family: monospace;
+            justify-items: center;
+            align-content: center;
+            text-align: center;
+            background-color: rgb(114, 218, 250);
+            }
+            #pizzaDigits1{
+            position: relative;
+                .button{
+                    background-color: khaki;
+                    font-family: monospace;
+                    font-size: 20px;//increased font size
+                    }
+            }
+            #pizzaRight{    
+            font-size: 20px;//increased font size
+            font-family: monospace;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(114, 218, 250);
+            }
+        }
+}
+
+///////////Desktop Media Queries Start
+@media only screen and (min-width: 1000px) {
+    #Toplogo{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(114, 218, 250);
+        height: 20vh;//increased logo size
+    }
+
+    #pizzaHeader{
+        display: grid;
+        grid-template-columns: 25vw 1fr;
+        background-color: rgb(114, 218, 250);
+        align-items: center;
+        justify-items: center;//Centered top logo
+        font-size: 14px;
+        font-family: monospace;
+        height: 20vh;//same height as mobile/tablet
+            #navSettings{
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: 25vw 25vw 25vw;
+            border-radius: 10%;
+            text-decoration: none;
+            background-color: rgb(114, 218, 250);
+                .button{
+                background-color: khaki;
+                cursor: pointer;
+                height: 10vh;
+                font-size: 3vh;
+                border: solid;
+                font-family: monospace;
+                }
+            }
+    }
+
+    #pizzaArticle{
+        #pizzaAbTitle{
+            font-style: monospace;
+            font-size: 32px;//increased font size for desktop
+            }
+            #pizzaAbout{
+                font-family: monospace;
+                font-size: 22px;//increased font size for desktop
+            }
+    }
+
+    #pizzaCyber {//Added new image to contact page
+        position: relative;
+        text-align: center;//Centered image
+            img{
+                height: 60vh;//increased height for desktop
+                width: 50%;
+            }
+    }
+
+    .pizzaH2 {
+        font-family: monospace;
+        font-size: 26px;//increased font size for desktop
+    }
+
+    .pizzaMenu {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+        grid-auto-rows: min-content;
+            .pizzaInception{
+                display: grid;
+                justify-items: center;
+                text-align: center;
+                align-items: center;
+                border: solid bisque 1px;
+                font-family: monospace;
+                font-size: 20px;//increased font size
+                    img{
+                        height: 35vh;//Increased the height of the menu images for desktop
+                        width: 75%;
+                        overflow: hidden;
+                        text-align: center;
+                    }       
+                }
+    }
+
+    #pizzaAnimate{  
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+            >img{
+                height: 65vh;//increased height of animation
+                &:hover{ 
+                animation: pizzaAnimation 2s ease-in-out 7;
+                }   
+            } 
+    }
+        
+        
+    #pizzaForm{
+        font-family: monospace;
+        font-size: 40px;//increased font size
+    }
+        
+    #pizzaLabel{
+        display: grid;
+        height: 50vh;//increased form size
+        justify-content: center;
+        text-align: center;
+        justify-items: center;
+        font-family: monospace;
+        font-size: 30px;//increased font size
+            #pizzaSubmit{
+                background-color: green;
+                font-family: monospace;
+                font-size: 30px;//increased font size
+                }
+    }
+        
+        
+    #pizzaContact{
+        display: grid;
+        grid-template-rows: repeat(auto-fill, minmax(50vw, 1fr));
+        justify-items: center;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        font-family: monospace;
+        font-size: 40px;//increased font size
+            #pizzaDigits2{
+                position: relative;
+                    .button{
+                        background-color: rgb(114, 218, 250);
+                        font-family: monospace;
+                        font-size: 35px;//increased font size
+                        }
+                }
+    }
+        
+
+    #pizzaMaps{ 
+        position: relative;
+            iframe{
+                width: 100%;
+                height: 85vh;//increased ,ap height
+                text-align: center;
+                }
+    }
+
+
+    #pizzaFooter{
+        display: grid;
+        grid-template-columns: 33vw 1fr 1fr;
+        grid-template-rows: 15vh 1fr;//increased footer grid height
+        background-color: rgb(114, 218, 250);
+        min-height: 7vh;
+        font-size: 12px;
+        align-items: center;
+        justify-items: center;
+        position: relative;
+        bottom: 0.1vh;
+            img{
+            height: 7vh;
+            background-color: rgb(114, 218, 250);
+            }
+            #pizzaAddy{
+            font-size: 20px;//increased font size
+            font-family: monospace;
+            justify-items: center;
+            align-content: center;
+            text-align: center;
+            background-color: rgb(114, 218, 250);
+            }
+            #pizzaDigits1{
+            position: relative;
+                .button{
+                    background-color: khaki;
+                    font-family: monospace;
+                    font-size: 20px;//increased font size
+                    }
+            }
+            #pizzaRight{    
+            font-size: 20px;//increased font size
+            font-family: monospace;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(114, 218, 250);
+            }
         }
 }
