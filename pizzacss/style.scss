@@ -30,7 +30,7 @@
         text-decoration: none;
         background-color: rgb(2, 97, 240);
             .button{
-            background-color: fuchsia;
+            background-color: $link-color;
             cursor: pointer;
             border-style: solid;
             border-color: black;
@@ -73,6 +73,7 @@
     #pizzaAbTitle{
         font-style: monospace;
         font-size: 22px;
+        background-color: rgb(2, 97, 240);
         }
         #pizzaAbout{
             font-family: monospace;
@@ -151,6 +152,7 @@
 .pizzaH2 {
     font-family: monospace;
     font-size: 22px;
+    background-color: $link-color;//shades in the background of text
 }
 
 
@@ -164,7 +166,7 @@
             justify-items: center;
             text-align: center;/*This is to get those p elements centered*/
             align-items: center;
-            border: solid bisque 1px;
+            border: solid rgb(233, 128, 0) 1px;
             font-family: monospace;
             }
                 img{
@@ -212,6 +214,7 @@ section h1{
 #pizzaForm{
     font-family: monospace;
     font-size: 23px;
+    background-color: rgb(2, 97, 240);
 }
 
 #pizzaLabel{
@@ -311,7 +314,7 @@ section h1{
         text-align: center;//Centered image
             img{
                 height: 45vh;//increased height 
-                width: 50%;
+                width: 100%;//tablet full screen width for Operation Hours
             }
     }
 
@@ -329,7 +332,7 @@ section h1{
                 justify-items: center;
                 text-align: center;
                 align-items: center;
-                border: solid bisque 1px;
+                border: solid rgb(233, 128, 0) 1px;
                 font-family: monospace;
                 font-size: 16px;
                     img{
@@ -352,51 +355,57 @@ section h1{
                 }   
             } 
     }
-        
     
-    #pizzaHoursop{
-        font-family: monospace;
-        font-size: 30px;
-    }
-
-
-    #pizzaForm{
-        font-family: monospace;
-        font-size: 30px;//increased font size
-    }
-        
-    #pizzaLabel{//moved form to the left once i switch to tablet view to preserve space
+    #pizzaBigContact{
         display: grid;
-        height: 40vh;
-        justify-content: left;//moved from center to left
-        text-align: left;//moved from center to left
-        justify-items: left;//moved from center to left
-        font-family: monospace;
-        font-size: 25px;//increased font size
-            #pizzaSubmit{
-                background-color: green;
+        position: relative;
+        grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+            #pizzaForm{
                 font-family: monospace;
-                font-size: 25px;//increased font size
-                }
-    }
-        
-        
-    #pizzaContact{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
-        text-align: center;
-        font-family: monospace;
-        font-size: 30px;//increased font size
-            #pizzaDigits2{
-                position: relative;
-                    .button{
-                        background-color: rgb(114, 218, 250);
+                font-size: 20px;
+                text-align: center;
+                background-color: rgb(233, 128, 0);
+                    .arrow{
+                        border: solid black;
+                        border-width: 0 6px 6px 0;
+                        display: inline-block;
+                        padding: 6px;
+                    } 
+                    .right{
+                        transform: rotate(-45deg);
+                        -webkit-transform: rotate(-45deg);
+                    }
+            }
+            #pizzaLabel{//Move the form to the left on desktop view for space
+                display: grid;
+                height: 40vh;
+                justify-content: center;
+                text-align: center;
+                justify-items: center;
+                font-family: monospace;
+                font-size: 20px;
+                    #pizzaSubmit{
+                        background-color: green;
                         font-family: monospace;
-                        font-size: 25px;//increased font size
-                        }
-                }
-    }
-        
+                        font-size: 20px;
+                    }
+            }
+            #pizzaContact{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+                text-align: center;
+                font-family: monospace;
+                font-size: 20px;
+                    #pizzaDigits2{
+                        position: relative;
+                            .button{
+                                background-color: rgb(114, 218, 250);
+                                font-family: monospace;
+                                font-size: 20px;
+                                }
+                    }
+            }    
+    }    
 
     #pizzaMaps{ 
         position: relative;
@@ -489,6 +498,23 @@ section h1{
             }
     }
 
+
+    #pizzaVideo{ 
+        position: relative;    
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+            iframe{
+            width: 100%; 
+            height:100%; 
+            border: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
     #pizzaArticle{
         #pizzaAbTitle{
             font-style: monospace;
@@ -504,8 +530,8 @@ section h1{
         position: relative;
         text-align: center;//Centered image
             img{
-                height: 60vh;//increased height for desktop
-                width: 50%;
+                height: 40vh;
+                width: 35%;//Decreased width for desktop
             }
     }
 
@@ -516,19 +542,19 @@ section h1{
 
     .pizzaMenu {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));//Keep at 25vw
         grid-auto-rows: min-content;
             .pizzaInception{
                 display: grid;
                 justify-items: center;
                 text-align: center;
                 align-items: center;
-                border: solid bisque 1px;
+                border: solid rgb(233, 128, 0) 1px;
                 font-family: monospace;
-                font-size: 20px;//increased font size
+                font-size: 18px;//increased font size
                     img{
-                        height: 35vh;//Increased the height of the menu images for desktop
-                        width: 75%;
+                        height: 25vh;//Decreased the height of the menu images for desktop
+                        width: 55%;//Decreased the width for desktop
                         overflow: hidden;
                         text-align: center;
                     }       
@@ -547,49 +573,55 @@ section h1{
             } 
     }
         
-    
-    #pizzaHoursop{
-        font-family: monospace;
-        font-size: 40px;
-    }
-
-    #pizzaForm{
-        font-family: monospace;
-        font-size: 40px;//increased font size
-    }
-        
-    #pizzaLabel{//Move the form to the left on desktop view for space
+    #pizzaBigContact{
         display: grid;
-        height: 50vh;//increased form size
-        justify-content: left;//moved from center to left
-        text-align: left;//moved from center to left
-        justify-items: left;//moved from center to left
-        font-family: monospace;
-        font-size: 30px;//increased font size
-            #pizzaSubmit{
-                background-color: green;
+        position: relative;
+        grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+            #pizzaForm{
                 font-family: monospace;
-                font-size: 30px;//increased font size
-                }
-    }
-        
-        
-    #pizzaContact{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
-        text-align: center;
-        font-family: monospace;
-        font-size: 40px;//increased font size
-            #pizzaDigits2{
-                position: relative;
-                    .button{
-                        background-color: rgb(114, 218, 250);
+                font-size: 20px;
+                text-align: center;
+                    .arrow{
+                        border: solid black;
+                        border-width: 0 9px 9px 0;
+                        display: inline-block;
+                        padding: 9px;
+                    } 
+                    .right{
+                        transform: rotate(-45deg);
+                        -webkit-transform: rotate(-45deg);
+                    }
+            }
+            #pizzaLabel{//Move the form to the left on desktop view for space
+                display: grid;
+                height: 40vh;//increased form size
+                justify-content: center;
+                text-align: center;
+                justify-items: center;
+                font-family: monospace;
+                font-size: 20px;
+                    #pizzaSubmit{
+                        background-color: green;
                         font-family: monospace;
-                        font-size: 35px;//increased font size
-                        }
-                }
+                        font-size: 20px;
+                    }
+            }
+            #pizzaContact{
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+                text-align: center;
+                font-family: monospace;
+                font-size: 25px;
+                    #pizzaDigits2{
+                        position: relative;
+                            .button{
+                                background-color: rgb(114, 218, 250);
+                                font-family: monospace;
+                                font-size: 25px;
+                                }
+                    }
+            }    
     }
-        
 
     #pizzaMaps{ 
         position: relative;
