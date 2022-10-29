@@ -9,13 +9,13 @@
     justify-items: left;
     justify-content: left;
     text-align: center;
-    background-color: rgb(114, 218, 250);
+    background-color: rgb(2, 97, 240);
 }
 
 #pizzaHeader{
     display: grid;
     grid-template-columns: 40vw 1fr;
-    background-color: rgb(114, 218, 250);
+    background-color: rgb(2, 97, 240);
     align-items: center;
     font-size: 14px;
     font-family: monospace;
@@ -28,7 +28,7 @@
         grid-template-columns: 15vw 1fr 1fr;
         border-radius: 10%;
         text-decoration: none;
-        background-color: rgb(114, 218, 250);
+        background-color: rgb(2, 97, 240);
             .button{
             background-color: fuchsia;
             cursor: pointer;
@@ -38,10 +38,16 @@
         }
 }
 
-#pizzaCarousel{
+///The html i used was a main wrapper div followed by a nav bar.
+///Then i used an "a href" link and labelled it Img1. After which
+/// i made my image class png be equal to the image source being
+///generated. I repated all these steps for the rest of the carousel.
+/// The second div for my html was to add these same images to the larger gallery.
+
+#pizzaCarousel{   
     position: relative;//This keeps the element affected by the css in order of the html
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 5fr;//The smaller column is for the smaller gallery and vice versa
     grid-gap: 10px;
     overflow: hidden;
     height: 100vh;   
@@ -50,11 +56,16 @@
             display: block;
         }
         #subpCar{
-            overflow-y: scroll;
+            overflow-y: scroll;//scroll through the carousel vertically
             overflow-x: hidden;
         }
         #pizzaGallery{
             overflow: scroll;
+            scroll-snap-type: x mandatory;
+                #gallery_img{//This helps with scrolling visuals and makes for a more cleaner site
+                    scroll-snap-align: start;
+                    margin-bottom: 10px;//better spacing between images
+                }
         }
 }
 
@@ -89,7 +100,7 @@
     display: grid;
     grid-template-columns: 33vw 1fr 1fr;
     grid-template-rows: 10vh 1fr;
-    background-color: rgb(114, 218, 250);
+    background-color: rgb(2, 97, 240);
     min-height: 7vh;
     font-size: 12px;
     align-items: center;
@@ -98,7 +109,7 @@
     bottom: 0.1vh;
     img{
         height: 7vh;
-        background-color: rgb(114, 218, 250);
+        background-color: rgb(2, 97, 240);
     }
     #pizzaAddy{
         font-size: 14px;
@@ -106,13 +117,13 @@
         justify-items: center;
         align-content: center;
         text-align: center;
-        background-color: rgb(114, 218, 250);
+        background-color: rgb(2, 97, 240);
     }
 
     #pizzaDigits1{
         position: relative;
                 .button{
-                    background-color: khaki;
+                    background-color: $link-color;
                     font-family: monospace;
                     font-size: 14px;
                 }
@@ -123,7 +134,7 @@
         justify-items: center;
         align-items: center;
         text-align: center;
-        background-color: rgb(114, 218, 250);
+        background-color: rgb(2, 97, 240);
     }
 }
 
@@ -185,7 +196,7 @@ section h1{
             //I tried to deconstruct and style it my own way and i checked web3/devdocs for some other ways to do it, 
             //but to no avail. I do understand how it works for the most part. 
             //The "&" increases the specificity to (0,1,0) which is good as the css I write will effect the element. The hover state has to be triggered in order for the animation to begin.
-                animation: pizzaAnimation 2s ease-in-out 7;
+            animation: pizzaAnimation 2s ease-in-out 7;
         }   //The animation titled "PizzaAnimation" I already made in the _animations.scss
             //The duration I used is 2 seconds and I did a contracting image transition
             //so i used ease-in-ease out. And I've capped my transitions to 7 times
@@ -193,9 +204,14 @@ section h1{
     } 
 }
 
+#pizzaHoursop{
+    font-family: monospace;
+    font-size: 23px;
+}
+
 #pizzaForm{
     font-family: monospace;
-    font-size: 30px;
+    font-size: 23px;
 }
 
 #pizzaLabel{
@@ -216,10 +232,7 @@ section h1{
 
 #pizzaContact{
     display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(50vw, 1fr));
-    justify-items: center;
-    align-items: center;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
     text-align: center;
     font-family: monospace;
         #pizzaDigits2{
@@ -249,19 +262,20 @@ section h1{
         width: 100%;
         align-items: center;
         text-align: center;
-        background-color: rgb(114, 218, 250);
+        background-color: rgb(2, 97, 240);
         height: 25vh;
     }
 
     #pizzaHeader{
         display: grid;
         grid-template-columns: 25vw 1fr;
-        background-color: rgb(114, 218, 250);
+        background-color: rgb(2, 97, 240);
         align-items: center;
         justify-items: center;//Centered top logo
         font-size: 14px;
         font-family: monospace;
         height: 25vh;//changed the header height
+        overflow: hidden;//needed for tablet as well
             #navSettings{
             display: grid;
             justify-items: center;
@@ -269,9 +283,9 @@ section h1{
             grid-template-columns: 25vw 25vw 25vw;
             border-radius: 10%;
             text-decoration: none;
-            background-color: rgb(114, 218, 250);
+            background-color: rgb(2, 97, 240);
                 .button{
-                background-color: khaki;
+                background-color: $link-color;
                 cursor: pointer;
                 height: 10vh;
                 font-size: 3vh;
@@ -339,18 +353,24 @@ section h1{
             } 
     }
         
-        
+    
+    #pizzaHoursop{
+        font-family: monospace;
+        font-size: 30px;
+    }
+
+
     #pizzaForm{
         font-family: monospace;
-        font-size: 35px;//increased font size
+        font-size: 30px;//increased font size
     }
         
-    #pizzaLabel{
+    #pizzaLabel{//moved form to the left once i switch to tablet view to preserve space
         display: grid;
         height: 40vh;
-        justify-content: center;
-        text-align: center;
-        justify-items: center;
+        justify-content: left;//moved from center to left
+        text-align: left;//moved from center to left
+        justify-items: left;//moved from center to left
         font-family: monospace;
         font-size: 25px;//increased font size
             #pizzaSubmit{
@@ -363,10 +383,7 @@ section h1{
         
     #pizzaContact{
         display: grid;
-        grid-template-rows: repeat(auto-fill, minmax(50vw, 1fr));
-        justify-items: center;
-        align-items: center;
-        justify-items: center;
+        grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
         text-align: center;
         font-family: monospace;
         font-size: 30px;//increased font size
@@ -395,7 +412,7 @@ section h1{
         display: grid;
         grid-template-columns: 33vw 1fr 1fr;
         grid-template-rows: 15vh 1fr;//increased footer grid height
-        background-color: rgb(114, 218, 250);
+        background-color: rgb(2, 97, 240);
         min-height: 7vh;
         font-size: 12px;
         align-items: center;
@@ -404,7 +421,7 @@ section h1{
         bottom: 0.1vh;
             img{
             height: 7vh;
-            background-color: rgb(114, 218, 250);
+            background-color: rgb(2, 97, 240);
             }
             #pizzaAddy{
             font-size: 20px;//increased font size
@@ -412,7 +429,7 @@ section h1{
             justify-items: center;
             align-content: center;
             text-align: center;
-            background-color: rgb(114, 218, 250);
+            background-color: rgb(2, 97, 240);
             }
             #pizzaDigits1{
             position: relative;
@@ -428,7 +445,7 @@ section h1{
             justify-items: center;
             align-items: center;
             text-align: center;
-            background-color: rgb(114, 218, 250);
+            background-color: rgb(2, 97, 240);
             }
         }
 }
@@ -439,19 +456,20 @@ section h1{
         width: 100%;
         align-items: center;
         text-align: center;
-        background-color: rgb(114, 218, 250);
+        background-color: rgb(2, 97, 240);
         height: 30vh;//increased logo size for desktop
     }
 
     #pizzaHeader{
         display: grid;
         grid-template-columns: 25vw 1fr;
-        background-color: rgb(114, 218, 250);
+        background-color: rgb(2, 97, 240);
         align-items: center;
         justify-items: center;//Centered top logo
         font-size: 14px;
         font-family: monospace;
         height: 30vh;//inceased height for desktop
+        overflow: hidden;//needed for desktop due to overflow
             #navSettings{
             display: grid;
             justify-items: center;
@@ -459,9 +477,9 @@ section h1{
             grid-template-columns: 25vw 25vw 25vw;
             border-radius: 10%;
             text-decoration: none;
-            background-color: rgb(114, 218, 250);
+            background-color: rgb(2, 97, 240);
                 .button{
-                background-color: khaki;
+                background-color: $link-color;
                 cursor: pointer;
                 height: 10vh;
                 font-size: 3vh;
@@ -529,18 +547,23 @@ section h1{
             } 
     }
         
-        
+    
+    #pizzaHoursop{
+        font-family: monospace;
+        font-size: 40px;
+    }
+
     #pizzaForm{
         font-family: monospace;
         font-size: 40px;//increased font size
     }
         
-    #pizzaLabel{
+    #pizzaLabel{//Move the form to the left on desktop view for space
         display: grid;
         height: 50vh;//increased form size
-        justify-content: center;
-        text-align: center;
-        justify-items: center;
+        justify-content: left;//moved from center to left
+        text-align: left;//moved from center to left
+        justify-items: left;//moved from center to left
         font-family: monospace;
         font-size: 30px;//increased font size
             #pizzaSubmit{
@@ -553,10 +576,7 @@ section h1{
         
     #pizzaContact{
         display: grid;
-        grid-template-rows: repeat(auto-fill, minmax(50vw, 1fr));
-        justify-items: center;
-        align-items: center;
-        justify-items: center;
+        grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
         text-align: center;
         font-family: monospace;
         font-size: 40px;//increased font size
@@ -575,8 +595,9 @@ section h1{
         position: relative;
             iframe{
                 width: 100%;
-                height: 85vh;//increased ,ap height
+                height: 85vh;//increased map height
                 text-align: center;
+                overflow: hidden;
                 }
     }
 
@@ -585,7 +606,7 @@ section h1{
         display: grid;
         grid-template-columns: 33vw 1fr 1fr;
         grid-template-rows: 15vh 1fr;//increased footer grid height
-        background-color: rgb(114, 218, 250);
+        background-color: rgb(2, 97, 240);
         min-height: 7vh;
         font-size: 12px;
         align-items: center;
@@ -594,7 +615,7 @@ section h1{
         bottom: 0.1vh;
             img{
             height: 7vh;
-            background-color: rgb(114, 218, 250);
+            background-color: rgb(2, 97, 240);
             }
             #pizzaAddy{
             font-size: 20px;//increased font size
@@ -602,23 +623,23 @@ section h1{
             justify-items: center;
             align-content: center;
             text-align: center;
-            background-color: rgb(114, 218, 250);
+            background-color: rgb(2, 97, 240);
             }
             #pizzaDigits1{
             position: relative;
                 .button{
-                    background-color: khaki;
+                    background-color: $link-color;
                     font-family: monospace;
                     font-size: 20px;//increased font size
                     }
             }
             #pizzaRight{    
-            font-size: 20px;//increased font size
+            font-size: 25px;//increased font size
             font-family: monospace;
             justify-items: center;
             align-items: center;
             text-align: center;
-            background-color: rgb(114, 218, 250);
+            background-color: rgb(2, 97, 240);
             }
         }
 }
