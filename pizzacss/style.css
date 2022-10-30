@@ -38,13 +38,13 @@
   justify-items: left;
   justify-content: left;
   text-align: center;
-  background-color: rgb(2, 97, 240);
+  background-image: url(/Media/FINITIOBKGROUND.png);
 }
 
 #pizzaHeader {
   display: grid;
   grid-template-columns: 40vw 1fr;
-  background-color: rgb(2, 97, 240);
+  background-image: url(/Media/FINITIOBKGROUND.png);
   align-items: center;
   font-size: 14px;
   font-family: monospace;
@@ -58,7 +58,7 @@
   grid-template-columns: 15vw 1fr 1fr;
   border-radius: 10%;
   text-decoration: none;
-  background-color: rgb(2, 97, 240);
+  background-image: url(/Media/FINITIOBKGROUND.png);
 }
 #pizzaHeader #navSettings .button {
   background-color: khaki;
@@ -222,9 +222,13 @@ section h1 img {
           animation: pizzaAnimation 2s ease-in-out 7;
 }
 
-#pizzaHoursop {
-  font-family: monospace;
-  font-size: 23px;
+#pizzaHOA {
+  position: relative;
+  text-align: center;
+  height: 40vh;
+}
+#pizzaHOA > img {
+  height: 35vh;
 }
 
 #pizzaForm {
@@ -277,13 +281,13 @@ section h1 img {
     width: 100%;
     align-items: center;
     text-align: center;
-    background-color: rgb(2, 97, 240);
+    background-image: url(/Media/FINITIOBKGROUND.png);
     height: 25vh;
   }
   #pizzaHeader {
     display: grid;
     grid-template-columns: 25vw 1fr;
-    background-color: rgb(2, 97, 240);
+    background-image: url(/Media/FINITIOBKGROUND.png);
     align-items: center;
     justify-items: center;
     font-size: 14px;
@@ -298,7 +302,7 @@ section h1 img {
     grid-template-columns: 25vw 25vw 25vw;
     border-radius: 10%;
     text-decoration: none;
-    background-color: rgb(2, 97, 240);
+    background-image: url(/Media/FINITIOBKGROUND.png);
   }
   #pizzaHeader #navSettings .button {
     background-color: khaki;
@@ -366,9 +370,17 @@ section h1 img {
     position: relative;
     grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
   }
+  #pizzaBigContact #pizzaHOA {
+    position: relative;
+    text-align: center;
+    height: 45vh;
+  }
+  #pizzaBigContact #pizzaHOA > img {
+    height: 35vh;
+  }
   #pizzaBigContact #pizzaForm {
     font-family: monospace;
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
     background-color: rgb(233, 128, 0);
   }
@@ -465,13 +477,13 @@ section h1 img {
     width: 100%;
     align-items: center;
     text-align: center;
-    background-color: rgb(2, 97, 240);
+    background-image: url(/Media/FINITIOBKGROUND.png);
     height: 30vh;
   }
   #pizzaHeader {
     display: grid;
     grid-template-columns: 25vw 1fr;
-    background-color: rgb(2, 97, 240);
+    background-image: url(/Media/FINITIOBKGROUND.png);
     align-items: center;
     justify-items: center;
     font-size: 14px;
@@ -486,7 +498,7 @@ section h1 img {
     grid-template-columns: 25vw 25vw 25vw;
     border-radius: 10%;
     text-decoration: none;
-    background-color: rgb(2, 97, 240);
+    background-image: url(/Media/FINITIOBKGROUND.png);
   }
   #pizzaHeader #navSettings .button {
     background-color: khaki;
@@ -524,8 +536,8 @@ section h1 img {
     text-align: center;
   }
   #pizzaCyber img {
-    height: 40vh;
-    width: 35%;
+    height: 45vh;
+    width: 30%;
   }
   .pizzaH2 {
     font-family: monospace;
@@ -568,6 +580,14 @@ section h1 img {
     display: grid;
     position: relative;
     grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  }
+  #pizzaBigContact #pizzaHOA {
+    position: relative;
+    text-align: center;
+    height: 45vh;
+  }
+  #pizzaBigContact #pizzaHOA > img {
+    height: 40vh;
   }
   #pizzaBigContact #pizzaForm {
     font-family: monospace;
@@ -618,7 +638,7 @@ section h1 img {
   }
   #pizzaMaps iframe {
     width: 100%;
-    height: 85vh;
+    height: 75vh;
     text-align: center;
     overflow: hidden;
   }
@@ -639,7 +659,7 @@ section h1 img {
     background-color: rgb(2, 97, 240);
   }
   #pizzaFooter #pizzaAddy {
-    font-size: 20px;
+    font-size: 25px;
     font-family: monospace;
     justify-items: center;
     align-content: center;
@@ -652,7 +672,7 @@ section h1 img {
   #pizzaFooter #pizzaDigits1 .button {
     background-color: khaki;
     font-family: monospace;
-    font-size: 20px;
+    font-size: 25px;
   }
   #pizzaFooter #pizzaRight {
     font-size: 25px;
