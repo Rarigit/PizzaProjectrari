@@ -223,16 +223,20 @@ section h1{
 
 #pizzaLabel{
     display: grid;
-    height: 30vh;
+    height: 40vh;
     justify-content: center;
     text-align: center;
     justify-items: center;
     font-family: monospace;
-    font-size: 16px;
+    font-size: 20px;
+        #pizzaReserve{
+        font-family: monospace;
+        font-size: 20px;
+        }
         #pizzaSubmit{
-            background-color: green;
-            font-family: monospace;
-            font-size: 20px;
+        background-color: green;
+        font-family: monospace;
+        font-size: 20px;
         }
 }
 
@@ -371,30 +375,19 @@ section h1{
                     height: 35vh;
                 }
             }
-        #pizzaForm{
-            font-family: monospace;
-            font-size: 22px;
-            text-align: center;
-            background-color: rgb(233, 128, 0);
-                .arrow{
-                    border: solid black;
-                    border-width: 0 6px 6px 0;
-                    display: inline-block;
-                    padding: 6px;
-                } 
-                .right{
-                    transform: rotate(-45deg);
-                    -webkit-transform: rotate(-45deg);
+
+            #pizzaLabel{//Move the form to the left on desktop view for space
+                display: grid;
+                height: 40vh;
+                justify-content: center;
+                text-align: center;
+                justify-items: center;
+                font-family: monospace;
+                font-size: 20px;
+                #pizzaReserve{
+                    font-family: monospace;
+                    font-size: 20px;
                 }
-            }
-        #pizzaLabel{//Move the form to the left on desktop view for space
-            display: grid;
-            height: 40vh;
-            justify-content: center;
-            text-align: center;
-            justify-items: center;
-            font-family: monospace;
-            font-size: 20px;
                 #pizzaSubmit{
                     background-color: green;
                     font-family: monospace;
@@ -466,7 +459,7 @@ section h1{
             text-align: center;
             background-color: rgb(2, 97, 240);
             }
-        }
+    }
 }
 
 ///////////Desktop Media Queries Start
@@ -595,21 +588,7 @@ section h1{
                         height: 40vh;
                     }
             }
-            #pizzaForm{
-                font-family: monospace;
-                font-size: 20px;
-                text-align: center;
-                    .arrow{
-                        border: solid black;
-                        border-width: 0 9px 9px 0;
-                        display: inline-block;
-                        padding: 9px;
-                    } 
-                    .right{
-                        transform: rotate(-45deg);
-                        -webkit-transform: rotate(-45deg);
-                    }
-            }
+
             #pizzaLabel{//Move the form to the left on desktop view for space
                 display: grid;
                 height: 40vh;//increased form size
@@ -617,12 +596,16 @@ section h1{
                 text-align: center;
                 justify-items: center;
                 font-family: monospace;
-                font-size: 20px;
-                    #pizzaSubmit{
-                        background-color: green;
-                        font-family: monospace;
-                        font-size: 20px;
-                    }
+                font-size: 25px;
+                #pizzaReserve{
+                    font-family: monospace;
+                    font-size: 25px;
+                }
+                #pizzaSubmit{
+                    background-color: green;
+                    font-family: monospace;
+                    font-size: 25px;
+                }
             }
             #pizzaContact{
                 display: grid;

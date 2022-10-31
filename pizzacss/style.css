@@ -239,12 +239,16 @@ section h1 img {
 
 #pizzaLabel {
   display: grid;
-  height: 30vh;
+  height: 40vh;
   justify-content: center;
   text-align: center;
   justify-items: center;
   font-family: monospace;
-  font-size: 16px;
+  font-size: 20px;
+}
+#pizzaLabel #pizzaReserve {
+  font-family: monospace;
+  font-size: 20px;
 }
 #pizzaLabel #pizzaSubmit {
   background-color: green;
@@ -378,28 +382,16 @@ section h1 img {
   #pizzaBigContact #pizzaHOA > img {
     height: 35vh;
   }
-  #pizzaBigContact #pizzaForm {
-    font-family: monospace;
-    font-size: 22px;
-    text-align: center;
-    background-color: rgb(233, 128, 0);
-  }
-  #pizzaBigContact #pizzaForm .arrow {
-    border: solid black;
-    border-width: 0 6px 6px 0;
-    display: inline-block;
-    padding: 6px;
-  }
-  #pizzaBigContact #pizzaForm .right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
   #pizzaBigContact #pizzaLabel {
     display: grid;
     height: 40vh;
     justify-content: center;
     text-align: center;
     justify-items: center;
+    font-family: monospace;
+    font-size: 20px;
+  }
+  #pizzaBigContact #pizzaLabel #pizzaReserve {
     font-family: monospace;
     font-size: 20px;
   }
@@ -589,21 +581,6 @@ section h1 img {
   #pizzaBigContact #pizzaHOA > img {
     height: 40vh;
   }
-  #pizzaBigContact #pizzaForm {
-    font-family: monospace;
-    font-size: 20px;
-    text-align: center;
-  }
-  #pizzaBigContact #pizzaForm .arrow {
-    border: solid black;
-    border-width: 0 9px 9px 0;
-    display: inline-block;
-    padding: 9px;
-  }
-  #pizzaBigContact #pizzaForm .right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-  }
   #pizzaBigContact #pizzaLabel {
     display: grid;
     height: 40vh;
@@ -611,12 +588,16 @@ section h1 img {
     text-align: center;
     justify-items: center;
     font-family: monospace;
-    font-size: 20px;
+    font-size: 25px;
+  }
+  #pizzaBigContact #pizzaLabel #pizzaReserve {
+    font-family: monospace;
+    font-size: 25px;
   }
   #pizzaBigContact #pizzaLabel #pizzaSubmit {
     background-color: green;
     font-family: monospace;
-    font-size: 20px;
+    font-size: 25px;
   }
   #pizzaBigContact #pizzaContact {
     display: grid;
