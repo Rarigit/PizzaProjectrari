@@ -96,7 +96,7 @@
 #pizzaArticle #pizzaAbTitle {
   font-style: monospace;
   font-size: 22px;
-  background-color: rgb(2, 97, 240);
+  background-color: khaki;
 }
 #pizzaArticle #pizzaAbout {
   font-family: monospace;
@@ -213,9 +213,10 @@ section h1 img {
   justify-items: center;
   align-items: center;
   text-align: center;
+  height: 50vh;
 }
 #pizzaAnimate > img {
-  height: 45vh;
+  height: 40vh;
 }
 #pizzaAnimate > img:hover {
   -webkit-animation: pizzaAnimation 2s ease-in-out 7;
@@ -363,7 +364,7 @@ section h1 img {
     text-align: center;
   }
   #pizzaAnimate > img {
-    height: 55vh;
+    height: 45vh;
   }
   #pizzaAnimate > img:hover {
     -webkit-animation: pizzaAnimation 2s ease-in-out 7;
@@ -562,7 +563,7 @@ section h1 img {
     text-align: center;
   }
   #pizzaAnimate > img {
-    height: 65vh;
+    height: 50vh;
   }
   #pizzaAnimate > img:hover {
     -webkit-animation: pizzaAnimation 2s ease-in-out 7;

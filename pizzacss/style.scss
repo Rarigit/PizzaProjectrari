@@ -1,6 +1,6 @@
 @use "general";//For now just using background setting from general
 @use "animations";//Works well for my element tag
-@import "variables";//For now using just the $logo-init function
+@import "variables";//Utilized the $logo-init function and $link-color
 
 #Toplogo{
     height: 20vh;
@@ -73,7 +73,7 @@
     #pizzaAbTitle{
         font-style: monospace;
         font-size: 22px;
-        background-color: rgb(2, 97, 240);
+        background-color: $link-color;
         }
         #pizzaAbout{
             font-family: monospace;
@@ -175,7 +175,7 @@
                     overflow: hidden;
                     text-align: center;
                 }
-    }
+}
 
 section h1{
     font-family: monospace;
@@ -192,19 +192,23 @@ section h1{
     justify-items: center;
     align-items: center;
     text-align: center;
+    height: 50vh;
     >img{
-        height: 45vh;
-        &:hover{ //This code style was used by the instructor in a previous in-class example. 
-            //I tried to deconstruct and style it my own way and i checked web3/devdocs for some other ways to do it, 
-            //but to no avail. I do understand how it works for the most part. 
-            //The "&" increases the specificity to (0,1,0) which is good as the css I write will effect the element. The hover state has to be triggered in order for the animation to begin.
+        height: 40vh;
+        &:hover{
             animation: pizzaAnimation 2s ease-in-out 7;
-        }   //The animation titled "PizzaAnimation" I already made in the _animations.scss
-            //The duration I used is 2 seconds and I did a contracting image transition
-            //so i used ease-in-ease out. And I've capped my transitions to 7 times
-            //as it does get hard to look at after a while. 
-    } 
+        }
+    }
 }
+//This code style was used by the instructor in a previous in-class example. 
+//I tried to deconstruct and style it my own way and i checked web3/devdocs for some other ways to do it, 
+//but to no avail. I do understand how it works for the most part. 
+//The "&" increases the specificity to (0,1,0) which is good as the css I write will effect the element. The hover state has to be triggered in order for the animation to begin.
+//The animation titled "PizzaAnimation" I already made in the _animations.scss
+//The duration I used is 2 seconds and I did a contracting image transition
+//so i used ease-in-ease out. And I've capped my transitions to 7 times
+//as it does get hard to look at after a while. 
+    
 
 #pizzaHOA{//This id is for the Hours of operation element on the contact page only
     position: relative;
@@ -213,7 +217,7 @@ section h1{
         >img{
             height: 35vh;
         }
-    }
+}
 
 #pizzaForm{
     font-family: monospace;
@@ -356,7 +360,7 @@ section h1{
         align-items: center;
         text-align: center;
             >img{
-                height: 55vh;//increased height of animation
+                height: 45vh;//increased height of animation
                 &:hover{ 
                 animation: pizzaAnimation 2s ease-in-out 7;
                 }   
@@ -374,10 +378,10 @@ section h1{
                 >img{
                     height: 35vh;
                 }
-            }
+        }
 
             #pizzaLabel{//Move the form to the left on desktop view for space
-                display: grid;
+                display: grid;//Used a form style to gather user data. Simnple and effective method utilizing label and input tags.
                 height: 40vh;
                 justify-content: center;
                 text-align: center;
@@ -388,7 +392,7 @@ section h1{
                     font-family: monospace;
                     font-size: 20px;
                 }
-                #pizzaSubmit{
+                #pizzaSubmit{//used this style as it is user friendly and rsponsive
                     background-color: green;
                     font-family: monospace;
                     font-size: 20px;
@@ -402,19 +406,19 @@ section h1{
             font-size: 20px;
                 #pizzaDigits2{
                     position: relative;
-                        .button{
+                        .button{//used this style to make it clickable and user-friendly
                             background-color: rgb(114, 218, 250);
                             font-family: monospace;
                             font-size: 20px;
                             }
                 }
-            }    
+        }    
     }    
 
     #pizzaMaps{ 
         position: relative;
             iframe{
-                width: 100%;
+                width: 100%;//used width 100% to get the map full screen and responsive on all sizes
                 height: 70vh;
                 text-align: center;
                 }
@@ -464,6 +468,7 @@ section h1{
 
 ///////////Desktop Media Queries Start
 @media only screen and (min-width: 1000px) {
+
     #Toplogo{
         width: 100%;
         align-items: center;
@@ -561,7 +566,7 @@ section h1{
                         overflow: hidden;
                         text-align: center;
                     }       
-                }
+            }
     }
 
     #pizzaAnimate{  
@@ -569,7 +574,7 @@ section h1{
         align-items: center;
         text-align: center;
             >img{
-                height: 65vh;//increased height of animation
+                height: 50vh;//increased height of animation
                 &:hover{ 
                 animation: pizzaAnimation 2s ease-in-out 7;
                 }   
@@ -607,21 +612,21 @@ section h1{
                     font-size: 25px;
                 }
             }
-            #pizzaContact{
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
-                text-align: center;
-                font-family: monospace;
-                font-size: 25px;
-                    #pizzaDigits2{
-                        position: relative;
-                            .button{
-                                background-color: rgb(114, 218, 250);
-                                font-family: monospace;
-                                font-size: 25px;
-                                }
-                    }
-            }    
+        #pizzaContact{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
+            text-align: center;
+            font-family: monospace;
+            font-size: 25px;
+                #pizzaDigits2{
+                    position: relative;
+                        .button{
+                            background-color: rgb(114, 218, 250);
+                            font-family: monospace;
+                            font-size: 25px;
+                        }
+                }
+        }    
     }
 
     #pizzaMaps{ 
@@ -676,4 +681,3 @@ section h1{
             }
         }
 }
-
